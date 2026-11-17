@@ -11,13 +11,6 @@ The train/validation/test split is determined from the dataset's calendar years:
 - validation: the penultimate year;
 - testing: the final year.
 For a 2018-2023 CSI300 file, this gives 2018-2021 / 2022 / 2023.
-
-This script follows the TC-SNP architecture and settings described in the
-manuscript. The correlation lookback (250 trading days) is retained from the
-uploaded CSI300 script because the manuscript defines T_g but does not give
-its numerical value. The spike-generation function f(.) is implemented with
- tanh; confirm this choice against the exact LSTM-SNP implementation used in
-your experiments if it differs.
 """
 
 import os
